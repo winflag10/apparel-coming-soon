@@ -1,0 +1,158 @@
+:root{
+	--DesaturatedRed: hsl(0, 36%, 70%);
+	--SoftRed: hsl(0, 93%, 68%);
+	--DarkGrayishRed: hsl(0, 6%, 24%);
+
+	--Grad1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+	--Grad2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+
+body{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	display: flex;
+	flex-direction: row;
+	margin:0;
+	height: 600px;
+}
+
+#left-side{
+	flex-grow: 1;
+	margin-left: 12%;
+}
+
+.logo{
+	margin-top: 10%
+}
+
+.title{
+	font-size: 75px;
+	letter-spacing: 25px;
+	color: var(--DarkGrayishRed)
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+span{
+	font-weight: 100;
+	color: var(--DesaturatedRed)
+}
+
+p{
+	color: var(--DesaturatedRed);
+	line-height: 30px;
+	padding-right: 35%;
+}
+
+form{
+	border-radius: 30px;
+	border:1px solid var(--DesaturatedRed);
+	margin-right: 35%;
+	height: 50px;
+	width: 400px;
+	display: flex;
+}
+
+input{
+	border:none;
+	border-radius: 30px;
+	height: 50px;
+	padding-left: 20px;
+	padding-right: 10px;
+	background: none;
+	flex-grow: 2;
+	font-family: inherit;
+}
+
+input:focus{
+	outline: none;
+}
+
+::placeholder{
+	color: var(--DesaturatedRed);
+}
+
+button{
+	height: 50px;
+	width: 100px;
+	border-radius: 30px;
+	margin:0;
+	border:none;
+	outline:none;
+	opacity: 1;
+	background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+	transition: 0.2s;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+
+}
+
+button:hover{
+	opacity: 0.8;
+}
+
+
+#error-icon{
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-right: 10px;
+	display: none;
+}
+
+.error-text{
+	color:var(--SoftRed);
+	padding-left: 20px;
+	margin-top: 2px;
+	font-size: 14px;
+	display: none;
+}
+
+#mobile-image{
+	display: none;
+}
+
+
+
+@media (max-width: 425px) {
+	#desktop-image{
+		display: none;
+	}
+
+	#mobile-image{
+		display: block;
+		width: 100%;
+	}
+
+	#left-side{
+		margin-left: 0;
+	}
+
+	.logo{
+		margin: 40px;
+		margin-left: 30px;
+		float: left;
+	}
+
+	.title{
+		font-size: 45px;
+		letter-spacing: 15px;
+	}
+
+	body{
+		text-align: center;
+		background: none;
+	}
+
+	p{
+		line-height: 25px;
+		padding-right: 70px;
+		padding-left: 70px;
+	}
+
+	#email-form{
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+
+}
